@@ -6,7 +6,6 @@ A Chrome extension that removes Reddit's auto-injected search links from comment
 ![Manifest](https://img.shields.io/badge/manifest-v3-green)
 ![Platform](https://img.shields.io/badge/platform-Chrome-yellow)
 
----
 
 ## What It Does
 
@@ -16,7 +15,6 @@ Reddit Comment Cleaner makes them disappear.
 
 Every time you open a Reddit page, the extension scans comment threads and strips out the injected search links, leaving behind the original clean text. No spyglasses, no surprise redirects. Just comments, the way they were written and meant to be read. Open the extension popup and you will see exactly how many links were removed from your current page. We will not spoil what happens to those pesky links, but the extension has a vocabulary, and none of the words are gentle.
 
----
 
 ## How It Works
 
@@ -37,7 +35,6 @@ Reddit wraps injected search links in a custom element called `<search-telemetry
 
 **Toggle:** The popup communicates with the content script via `chrome.runtime.sendMessage`. Pause state is persisted in `sessionStorage` (per-tab, cleared on tab close) so a paused tab stays paused across reloads without affecting any other tab.
 
----
 
 ## Features
 
@@ -49,7 +46,6 @@ Reddit wraps injected search links in a custom element called `<search-telemetry
 - Zero data collection. No analytics. No tracking. Nothing leaves your browser. Ever.
 - Lightweight. No background service worker. No network requests. No dependencies.
 
----
 
 ## Installation
 
@@ -63,7 +59,6 @@ Coming soon.
 4. Click **Load unpacked** and select the `extension` folder
 5. Navigate to any Reddit thread and open the extension popup
 
----
 
 ## Security Review
 
@@ -89,7 +84,6 @@ The popup uses `innerHTML` in one place to update the headline. The only dynamic
 ### External Links
 The popup contains links to GitHub and Buy Me a Coffee. Both use `rel="noopener"`. The extension makes no requests to these or any other external service.
 
----
 
 ## Performance Review
 
@@ -127,13 +121,11 @@ Total package size: ~1.2MB. The bulk is two image assets (logo and coffee GIF). 
 | Supply chain | Clean | Zero dependencies, no external code |
 | Performance impact | Negligible | Sub-millisecond operations, ~2KB memory |
 
----
 
 ## License
 
 GPL-3.0. See [LICENSE](https://raw.githubusercontent.com/2xNeil/reddit-comment-cleaner/refs/heads/main/LICENSE) for details.
 
----
 
 ## Support
 
