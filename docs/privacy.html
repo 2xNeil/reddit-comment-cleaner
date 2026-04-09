@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Reddit Comment Cleaner</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:    #ff4500;
+      --text:      #e8edf5;
+      --muted:     #5d6e8a;
+      --surface:   rgba(255,255,255,0.04);
+      --border:    rgba(255,255,255,0.07);
+      --radius:    14px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background:
+        radial-gradient(ellipse 75% 55% at 4% 18%,
+          #2356c8 0%, #0e2760 22%, #060d20 52%, #020810 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 62px;
+      background: rgba(2,8,16,0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      font-size: 15px; font-weight: 700;
+      color: var(--text); text-decoration: none; letter-spacing: -0.2px;
+    }
+    .nav-logo span { color: var(--orange); }
+
+    .nav-back {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      padding: 6px 12px; border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-back:hover { color: var(--text); background: var(--surface); }
+
+    /* ─── PROSE ──────────────────────────────────── */
+    .prose-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 48px 100px;
+    }
+
+    .prose-wrap .page-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: 2.5px;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+    }
+
+    .prose-wrap h1 {
+      font-size: 38px; font-weight: 800; letter-spacing: -1.2px;
+      line-height: 1.1; margin-bottom: 10px;
+    }
+
+    .prose-wrap .meta {
+      font-size: 13px; color: var(--muted); margin-bottom: 48px;
+      padding-bottom: 24px; border-bottom: 1px solid var(--border);
+    }
+
+    .prose-wrap h2 {
+      font-size: 18px; font-weight: 700; letter-spacing: -0.3px;
+      margin: 40px 0 12px; color: var(--text);
+    }
+
+    .prose-wrap p {
+      font-size: 15px; color: #a8b4c8; line-height: 1.75; margin-bottom: 14px;
+    }
+
+    .prose-wrap ul {
+      margin: 10px 0 16px 20px; display: flex; flex-direction: column; gap: 6px;
+    }
+
+    .prose-wrap li {
+      font-size: 15px; color: #a8b4c8; line-height: 1.7;
+    }
+
+    .prose-wrap strong { color: var(--text); font-weight: 600; }
+
+    .prose-wrap a { color: var(--orange); text-decoration: none; }
+    .prose-wrap a:hover { text-decoration: underline; }
+
+    /* table */
+    .prose-wrap table {
+      width: 100%; border-collapse: collapse;
+      margin: 20px 0 24px; font-size: 14px;
+    }
+    .prose-wrap th {
+      text-align: left; padding: 10px 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      color: var(--text); font-weight: 600;
+    }
+    .prose-wrap td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: #a8b4c8;
+      vertical-align: top;
+    }
+    .prose-wrap tr:hover td { background: rgba(255,255,255,0.02); }
+
+    code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 13px;
+      background: rgba(255,255,255,0.07);
+      padding: 2px 6px; border-radius: 4px;
+      color: var(--orange);
+    }
+
+    /* ─── FOOTER ─────────────────────────────────── */
+    footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 48px;
+      border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 22px; }
+
+    @media (max-width: 700px) {
+      nav { padding: 0 20px; }
+      .prose-wrap { padding: 40px 20px 70px; }
+      .prose-wrap h1 { font-size: 28px; }
+      footer { flex-direction: column; gap: 14px; text-align: center; padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Reddit Comment Cleaner<span>.</span></a>
+    <a class="nav-back" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </a>
+  </nav>
+
+  <div class="prose-wrap">
+    <p class="page-eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: April 3, 2026 &nbsp;/&nbsp; Last updated: April 3, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>Reddit Comment Cleaner ("the Extension") is a Chrome browser extension developed by Neil Mate ("we", "us", "our"). This privacy policy explains how the Extension handles information when you use it. We are committed to protecting your privacy. The Extension is designed to function entirely on your device with no data collection whatsoever.</p>
+
+    <h2>2. Information We Collect</h2>
+    <p>We do not collect any information. Specifically:</p>
+    <ul>
+      <li>No personal information (name, email, address, phone number)</li>
+      <li>No browsing history or browsing activity</li>
+      <li>No authentication credentials or financial information</li>
+      <li>No website content or user-generated content</li>
+      <li>No health, location, or communication data</li>
+      <li>No analytics, telemetry, or crash reports</li>
+    </ul>
+    <p>The Extension does not transmit any data from your browser to us, to any third party, or to any server anywhere.</p>
+
+    <h2>3. How the Extension Works</h2>
+    <p>The Extension performs all operations locally within your browser tab:</p>
+    <ul>
+      <li><strong>Tab URL reading:</strong> The Extension uses the <code>tabs</code> permission solely to read the URL of your currently active tab to determine whether you are on reddit.com. This URL is checked locally and is never stored, logged, or transmitted.</li>
+      <li><strong>DOM modification:</strong> On reddit.com pages, the Extension identifies and removes auto-injected search links from comment threads. This is a local operation performed entirely within your browser's rendering engine.</li>
+      <li><strong>Session state:</strong> The Extension stores a single on/off preference in your browser's <code>sessionStorage</code>. This value exists only within the individual browser tab, is never transmitted, and is automatically deleted when the tab is closed.</li>
+      <li><strong>In-memory counter:</strong> The Extension counts the number of links removed during the current page session. This count is held in JavaScript memory only, is never written to disk or transmitted, and is discarded when the page is navigated away from or closed.</li>
+    </ul>
+
+    <h2>4. Permissions Justification</h2>
+    <table>
+      <thead>
+        <tr><th>Permission</th><th>Purpose</th><th>Scope</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>tabs</code></td>
+          <td>Read the active tab's URL to detect reddit.com pages and enable the popup's status display</td>
+          <td>Read-only, active tab only</td>
+        </tr>
+        <tr>
+          <td>Content script on <code>https://www.reddit.com/*</code></td>
+          <td>Remove injected search link elements from comment threads</td>
+          <td>reddit.com pages only</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>No other permissions are requested. The Extension does not request access to browsing history, cookies, downloads, bookmarks, clipboard, or any other browser data.</p>
+
+    <h2>5. Third-Party Services</h2>
+    <p>The Extension itself makes zero network requests. No API calls, no analytics pings, no update checks beyond Chrome's standard extension update mechanism.</p>
+    <p>The Extension's popup contains two optional links that open in a new tab when clicked:</p>
+    <ul>
+      <li><strong>GitHub</strong> (github.com): Links to the Extension's open-source repository</li>
+      <li><strong>Buy Me a Coffee</strong> (buymeacoffee.com): Links to a voluntary support page</li>
+    </ul>
+    <p>These are standard hyperlinks. Clicking them is entirely voluntary and navigates you to third-party websites governed by their own privacy policies. The Extension does not pre-fetch, ping, or communicate with these sites in any way unless you explicitly click the link.</p>
+
+    <h2>6. Data Sharing</h2>
+    <p>We do not share any data with any third party because we do not collect any data. There is nothing to share.</p>
+
+    <h2>7. Data Retention</h2>
+    <p>No data is retained. The Extension's <code>sessionStorage</code> value and in-memory counter are automatically cleared by the browser when the tab is closed. No data is written to local storage, IndexedDB, cookies, or any other persistent mechanism.</p>
+
+    <h2>8. Children's Privacy</h2>
+    <p>The Extension does not collect any information from anyone, including children under the age of 13. It is compliant with the Children's Online Privacy Protection Act (COPPA).</p>
+
+    <h2>9. Security</h2>
+    <p>Because the Extension does not collect, store, or transmit any data, there is no user data at risk. The Extension's source code is open source and available for review at <a href="https://github.com/2xNeil/reddit-comment-cleaner" target="_blank" rel="noopener">github.com/2xNeil/reddit-comment-cleaner</a>.</p>
+
+    <h2>10. Your Rights</h2>
+    <p>Since we collect no data, there is no personal data to access, correct, delete, or export. You may uninstall the Extension at any time through your browser's extension management page, which will immediately remove all Extension code and the temporary session data from your browser.</p>
+
+    <h2>11. Changes to This Policy</h2>
+    <p>If we update this privacy policy, the revised version will be published with the Extension update and the "Last updated" date above will be changed. Continued use of the Extension after changes constitutes acceptance of the updated policy.</p>
+
+    <h2>12. Open Source</h2>
+    <p>The Extension's complete source code is publicly available at <a href="https://github.com/2xNeil/reddit-comment-cleaner" target="_blank" rel="noopener">github.com/2xNeil/reddit-comment-cleaner</a>. You may audit exactly what the Extension does at any time.</p>
+
+    <h2>13. Contact</h2>
+    <p>If you have questions about this privacy policy, please open an issue at <a href="https://github.com/2xNeil/reddit-comment-cleaner/issues" target="_blank" rel="noopener">github.com/2xNeil/reddit-comment-cleaner/issues</a>.</p>
+  </div>
+
+  <footer>
+    <span>Reddit Comment Cleaner / GPL-3.0</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="license.html">License</a>
+      <a href="https://github.com/2xNeil/reddit-comment-cleaner" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</body>
+</html>

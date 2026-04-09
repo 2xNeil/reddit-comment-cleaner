@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service - Reddit Comment Cleaner</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:    #ff4500;
+      --text:      #e8edf5;
+      --muted:     #5d6e8a;
+      --surface:   rgba(255,255,255,0.04);
+      --border:    rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background:
+        radial-gradient(ellipse 75% 55% at 4% 18%,
+          #2356c8 0%, #0e2760 22%, #060d20 52%, #020810 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 62px;
+      background: rgba(2,8,16,0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo { font-size: 15px; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.2px; }
+    .nav-logo span { color: var(--orange); }
+
+    .nav-back {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      padding: 6px 12px; border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-back:hover { color: var(--text); background: var(--surface); }
+
+    .prose-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 48px 100px;
+    }
+
+    .page-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+
+    .prose-wrap h1 { font-size: 38px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 10px; }
+
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+
+    .prose-wrap h2 { font-size: 18px; font-weight: 700; letter-spacing: -0.3px; margin: 40px 0 12px; }
+
+    .prose-wrap p { font-size: 15px; color: #a8b4c8; line-height: 1.75; margin-bottom: 14px; }
+
+    .prose-wrap ul { margin: 10px 0 16px 20px; display: flex; flex-direction: column; gap: 6px; }
+    .prose-wrap li { font-size: 15px; color: #a8b4c8; line-height: 1.7; }
+
+    .prose-wrap strong { color: var(--text); font-weight: 600; }
+    .prose-wrap a { color: var(--orange); text-decoration: none; }
+    .prose-wrap a:hover { text-decoration: underline; }
+
+    .caps-block {
+      font-size: 13px;
+      color: #8a95a8;
+      line-height: 1.8;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 14px;
+    }
+
+    footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 48px;
+      border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 22px; }
+
+    @media (max-width: 700px) {
+      nav { padding: 0 20px; }
+      .prose-wrap { padding: 40px 20px 70px; }
+      .prose-wrap h1 { font-size: 28px; }
+      footer { flex-direction: column; gap: 14px; text-align: center; padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Reddit Comment Cleaner<span>.</span></a>
+    <a class="nav-back" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </a>
+  </nav>
+
+  <div class="prose-wrap">
+    <p class="page-eyebrow">Legal</p>
+    <h1>Terms of Service</h1>
+    <p class="meta">Effective date: April 3, 2026 &nbsp;/&nbsp; Last updated: April 3, 2026</p>
+
+    <h2>1. Acceptance of Terms</h2>
+    <p>By installing, accessing, or using the Reddit Comment Cleaner browser extension ("the Extension"), you ("you", "your", "the User") agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not install or use the Extension. These Terms constitute a legally binding agreement between you and Neil Mate ("we", "us", "our", "the Developer").</p>
+
+    <h2>2. Description of the Extension</h2>
+    <p>The Extension is a free, open-source Chrome browser extension that modifies the visual presentation of reddit.com pages by removing auto-injected search links from comment threads. The Extension operates entirely within your browser and does not collect, transmit, or store any user data.</p>
+
+    <h2>3. License</h2>
+    <p>The Extension is provided under an open-source license. You are granted a limited, non-exclusive, non-transferable, revocable license to install and use the Extension for personal, non-commercial purposes, subject to these Terms.</p>
+    <p>You may:</p>
+    <ul>
+      <li>Install and use the Extension on any number of personal devices</li>
+      <li>View, fork, and modify the source code in accordance with the repository's license</li>
+      <li>Share the Extension with others by directing them to the official distribution channels</li>
+    </ul>
+    <p>You may not:</p>
+    <ul>
+      <li>Repackage, rebrand, or redistribute the Extension as your own product</li>
+      <li>Use the Extension or its source code to create a competing product without attribution</li>
+      <li>Remove or alter any copyright notices, attribution, or license information</li>
+      <li>Use the Extension for any unlawful purpose</li>
+    </ul>
+
+    <h2>4. Eligibility</h2>
+    <p>You must be at least 13 years of age to use the Extension. By using the Extension, you represent and warrant that you meet this age requirement. If you are under 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms.</p>
+
+    <h2>5. Modifications to the Extension</h2>
+    <p>We reserve the right to modify, update, suspend, or discontinue the Extension at any time, with or without notice. We are under no obligation to provide updates, enhancements, or bug fixes. We shall not be liable to you or any third party for any modification, suspension, or discontinuation of the Extension.</p>
+
+    <h2>6. Third-Party Platforms and Services</h2>
+    <p>The Extension operates on reddit.com, a platform owned and operated by Reddit, Inc. We are not affiliated with, endorsed by, or sponsored by Reddit, Inc. or Google LLC. Your use of reddit.com is governed by Reddit's own terms of service and privacy policy.</p>
+    <p>The Extension's popup contains links to third-party websites (github.com and buymeacoffee.com). We are not responsible for the content, privacy practices, or terms of service of any third-party websites.</p>
+
+    <h2>7. Intellectual Property</h2>
+    <p>The Extension, including its code, design, icons, logos, and documentation, is the intellectual property of Neil Mate unless otherwise noted. The Reddit name and Snoo character are trademarks of Reddit, Inc. and are used solely for descriptive and informational purposes. All third-party trademarks referenced in the Extension are the property of their respective owners.</p>
+
+    <h2>8. Disclaimer of Warranties</h2>
+    <div class="caps-block">
+      THE EXTENSION IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND TITLE.<br><br>
+      WE DO NOT WARRANT THAT THE EXTENSION WILL FUNCTION UNINTERRUPTED OR ERROR-FREE, THAT IT WILL REMAIN COMPATIBLE WITH REDDIT'S WEBSITE STRUCTURE (WHICH MAY CHANGE AT ANY TIME WITHOUT NOTICE), OR THAT ANY DEFECTS WILL BE CORRECTED.
+    </div>
+
+    <h2>9. Limitation of Liability</h2>
+    <div class="caps-block">
+      TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE DEVELOPER BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR LOSS OF PROFITS, REVENUE, DATA, OR GOODWILL ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE THE EXTENSION.<br><br>
+      IN NO EVENT SHALL OUR TOTAL AGGREGATE LIABILITY TO YOU EXCEED THE AMOUNT YOU PAID FOR THE EXTENSION, WHICH IS ZERO DOLLARS ($0.00 USD).
+    </div>
+
+    <h2>10. Indemnification</h2>
+    <p>You agree to defend, indemnify, and hold harmless the Developer and any affiliated contributors from and against any claims, damages, obligations, losses, liabilities, costs, and expenses arising from: your use or misuse of the Extension; your violation of these Terms; your violation of any applicable law or third-party right; or any modification you make to the Extension's source code and subsequent distribution thereof.</p>
+
+    <h2>11. Assumption of Risk</h2>
+    <p>You acknowledge that the Extension modifies the DOM of reddit.com pages, which may interfere with Reddit's intended functionality. Use of browser extensions that modify website content may violate the terms of service of the affected website. You are solely responsible for determining whether your use of the Extension complies with Reddit's terms and any applicable laws.</p>
+
+    <h2>12. Termination</h2>
+    <p>We may terminate or suspend your right to use the Extension at any time, for any reason, without notice or liability. You may terminate your use at any time by uninstalling the Extension from your browser. Sections 8, 9, 10, 11, 13, 14, 15, and 16 shall survive any termination.</p>
+
+    <h2>13. Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which the Developer resides, without regard to conflict of law provisions.</p>
+
+    <h2>14. Dispute Resolution</h2>
+    <p>Any dispute arising out of or relating to these Terms shall first be attempted to be resolved through good-faith informal negotiation. Any claim must be filed within one (1) year after such claim arose, or be forever barred.</p>
+
+    <h2>15. Severability</h2>
+    <p>If any provision of these Terms is found invalid or unenforceable, it shall be modified to the minimum extent necessary to make it enforceable, or severed. The remaining provisions shall continue in full force and effect.</p>
+
+    <h2>16. Entire Agreement</h2>
+    <p>These Terms, together with our <a href="privacy.html">Privacy Policy</a>, constitute the entire agreement between you and the Developer regarding your use of the Extension.</p>
+
+    <h2>17. Contact</h2>
+    <p>If you have questions about these Terms, please open an issue at <a href="https://github.com/2xNeil/reddit-comment-cleaner/issues" target="_blank" rel="noopener">github.com/2xNeil/reddit-comment-cleaner/issues</a>.</p>
+  </div>
+
+  <footer>
+    <span>Reddit Comment Cleaner / GPL-3.0</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="license.html">License</a>
+      <a href="https://github.com/2xNeil/reddit-comment-cleaner" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</body>
+</html>

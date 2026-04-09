@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>License - Reddit Comment Cleaner</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:    #ff4500;
+      --text:      #e8edf5;
+      --muted:     #5d6e8a;
+      --surface:   rgba(255,255,255,0.04);
+      --border:    rgba(255,255,255,0.07);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background:
+        radial-gradient(ellipse 75% 55% at 4% 18%,
+          #2356c8 0%, #0e2760 22%, #060d20 52%, #020810 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 62px;
+      background: rgba(2,8,16,0.7);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo { font-size: 15px; font-weight: 700; color: var(--text); text-decoration: none; letter-spacing: -0.2px; }
+    .nav-logo span { color: var(--orange); }
+
+    .nav-back {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 13px; color: var(--muted); text-decoration: none;
+      padding: 6px 12px; border-radius: 8px;
+      border: 1px solid var(--border);
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-back:hover { color: var(--text); background: var(--surface); }
+
+    .prose-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 48px 100px;
+    }
+
+    .page-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+
+    .prose-wrap h1 { font-size: 38px; font-weight: 800; letter-spacing: -1.2px; line-height: 1.1; margin-bottom: 10px; }
+
+    .meta { font-size: 13px; color: var(--muted); margin-bottom: 48px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+
+    .prose-wrap p { font-size: 15px; color: #a8b4c8; line-height: 1.75; margin-bottom: 14px; }
+    .prose-wrap a { color: var(--orange); text-decoration: none; }
+    .prose-wrap a:hover { text-decoration: underline; }
+
+    .license-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 22px;
+      margin-bottom: 36px;
+    }
+
+    .license-badge .badge-icon {
+      width: 40px; height: 40px;
+      background: rgba(255, 69, 0, 0.12);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--orange); flex-shrink: 0;
+    }
+
+    .license-badge .badge-name {
+      font-size: 17px; font-weight: 700; letter-spacing: -0.3px;
+    }
+
+    .license-badge .badge-sub {
+      font-size: 12px; color: var(--muted);
+    }
+
+    .license-text {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-top: 32px;
+    }
+
+    .license-text pre {
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: 12px;
+      color: #7a8a9e;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .github-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .github-link:hover { background: rgba(255,255,255,0.1); }
+
+    footer {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 22px 48px;
+      border-top: 1px solid var(--border);
+      font-size: 12px; color: var(--muted);
+    }
+    footer a { color: var(--muted); text-decoration: none; transition: color 0.15s; }
+    footer a:hover { color: var(--text); }
+    .footer-links { display: flex; gap: 22px; }
+
+    @media (max-width: 700px) {
+      nav { padding: 0 20px; }
+      .prose-wrap { padding: 40px 20px 70px; }
+      .prose-wrap h1 { font-size: 28px; }
+      .license-text { padding: 20px; }
+      footer { flex-direction: column; gap: 14px; text-align: center; padding: 22px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-logo" href="index.html">Reddit Comment Cleaner<span>.</span></a>
+    <a class="nav-back" href="index.html">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </a>
+  </nav>
+
+  <div class="prose-wrap">
+    <p class="page-eyebrow">Legal</p>
+    <h1>License</h1>
+    <p class="meta">Reddit Comment Cleaner is free and open source software.</p>
+
+    <div class="license-badge">
+      <div class="badge-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div>
+        <div class="badge-name">GNU General Public License v3.0</div>
+        <div class="badge-sub">Copyleft / Free Software Foundation / June 29, 2007</div>
+      </div>
+    </div>
+
+    <p>This extension is released under the GPL-3.0 license. You are free to run, study, modify, and distribute this software under the following conditions:</p>
+
+    <p><strong style="color:var(--text)">You may:</strong> use the software for any purpose, study how it works and modify it, distribute copies, and distribute your modified versions — provided you release them under the same GPL-3.0 license with source code available.</p>
+
+    <p><strong style="color:var(--text)">You may not:</strong> distribute the software under a different license, incorporate it into proprietary software, or remove copyright notices.</p>
+
+    <p>The full license text is available in the repository:</p>
+
+    <a class="github-link" href="https://github.com/2xNeil/reddit-comment-cleaner/blob/main/LICENSE" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+      View full license on GitHub
+    </a>
+
+    <div class="license-text">
+      <pre>GNU GENERAL PUBLIC LICENSE
+Version 3, 29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc.
+&lt;https://fsf.org/&gt;
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
+
+                            Preamble
+
+  The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+  When we speak of free software, we are referring to freedom, not
+price. Our General Public Licenses are designed to make sure that you
+have the freedom to share and change all versions of a program--to
+make sure it remains free software for all its users.
+
+  To protect your rights, we need to prevent others from denying you
+these rights or asking you to surrender the rights. Therefore, you
+have certain responsibilities if you distribute copies of the software,
+or if you modify it: responsibilities to respect the freedom of others.
+
+  For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must pass on to the recipients the same
+freedoms that you received. You must make sure that they, too, receive
+or can get the source code. And you must show them these terms so they
+know their rights.
+
+  The full license text is available at:
+  https://github.com/2xNeil/reddit-comment-cleaner/blob/main/LICENSE</pre>
+    </div>
+  </div>
+
+  <footer>
+    <span>Reddit Comment Cleaner / GPL-3.0</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="license.html">License</a>
+      <a href="https://github.com/2xNeil/reddit-comment-cleaner" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</body>
+</html>
